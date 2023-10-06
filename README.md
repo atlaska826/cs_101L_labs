@@ -9,7 +9,7 @@
   * Unit Tests - [Slot_UnitTests.py](Lab%204/Slot_UnitTests.py)
 * Week 6 --- [Lab 5 - _Strings_](Lab%205/lab5.py)
   * Unit Tests - [lab05_tests.py](Lab%205/lab05_tests.py)
-* Week 7 --- **[EXAM 1](Exam%201/exam1.py)**
+* Week 7 --- [Lab 6 - _EXAM 1_](lab6.py)
 * Week 8 --- [Lab # - _Reading and writing files + Handling exceptions_]()
 * Week 9 --- [Lab # - _Using Lists and Tuples_]()
 * Week 10 --- [Lab # - _Using Dictionaries and Sets_]()
