@@ -5,7 +5,7 @@ upper_letters = string.ascii_uppercase
 
 """FUNCTIONS"""
 def encrypt(string_text, int_key):
-    '''Caesar-encrypts string using specified key.'''
+    """Caesar-encrypts string using specified key."""
     new_string = ''
     for letter in string_text:
         new_key = int_key  # Creates a variable to hold the original value of int_key each iteration
@@ -20,12 +20,12 @@ def encrypt(string_text, int_key):
 
 
 def decrypt(string_text, int_key):
-    ''' Decrypts Caesar-encrypted string with specified key. '''
+    """Decrypts Caesar-encrypted string with specified key."""
     return encrypt(string_text, int(26 - int_key))
 
 
 def get_input():
-    '''Interacts with user. '''
+    """Interacts with user."""
     menu_option_list = ['1', '2', 'Q']  # List containing valid answer choices
 
     menu_option = input('Enter your selection ==> ')
@@ -36,7 +36,7 @@ def get_input():
 
 
 def print_menu():
-    '''Prints menu. No user interaction. '''
+    """Prints menu. No user interaction."""
     print('MAIN MENU:')
     print('1) Encode a string')
     print('2) Decode a string')
