@@ -46,8 +46,9 @@ def get_output_file() -> str:
     while True:
         output_filename = input('Enter the name of the file to output to ==> ')
         try:
-            with open(output_filename, 'w+') as out_file:
-                return output_filename
+            output_file = open(output_filename, 'w')
+            output_file.close()
+            return output_filename
         except IOError:
             print(f'There is an IO Error {output_filename}')
 
