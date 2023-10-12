@@ -1,29 +1,16 @@
-"""
-TODO:
-    - Add docstrings
-    - Exception handling
-    - Write main code
-
-Errors needed:
-    - FileNotFound
-    - IOError
-    - ValueError
-    - etc
-
-"""
-
 """INITIALIZATION"""
 
 
 def get_min_mpg() -> int:
+    """Returns min_mpg once user enters the valid float number"""
     while True:
         try:
-            min_mpg = int(input('Enter the minimum mpg ==> '))
-            if 0 < min_mpg <= 100:
+            mpg = int(input('Enter the minimum mpg ==> '))
+            if 0 < mpg <= 100:
                 print()
-                return min_mpg
+                return mpg
             else:
-                if min_mpg <= 0:
+                if mpg <= 0:
                     print('Fuel economy must be greater than 0.\n')
                 else:
                     print('Fuel economy must be less than or equal to 100.\n')
@@ -32,10 +19,11 @@ def get_min_mpg() -> int:
 
 
 def get_input_file() -> str:
+    """Asks the user to enter the name of the input file"""
     while True:
         input_filename = input('Enter the name of the input vehicle file ==> ')
         try:
-            with open(input_filename, 'r') as file:
+            with open(input_filename, 'r'):
                 print()
                 return input_filename
         except FileNotFoundError:
@@ -43,12 +31,12 @@ def get_input_file() -> str:
 
 
 def get_output_file() -> str:
+    """Asks the user to enter the name of the file they want to output to"""
     while True:
         output_filename = input('Enter the name of the file to output to ==> ')
         try:
-            output_file = open(output_filename, 'w')
-            output_file.close()
-            return output_filename
+            with open(output_filename, 'w'):
+                return output_filename
         except IOError:
             print(f'There is an IO Error {output_filename}')
 
@@ -66,8 +54,7 @@ with open(get_input_file(), 'r') as input_file:
             item_list = item.split('\t')
             try:
                 if float(item_list[7]) >= min_mpg:
-                    out_file.write(f'{item_list[0] + " " + item_list[1]:<40}{item_list[2]:<40}{float(item_list[7]):>40.3f}\n')
+                    out_file.write(f'{item_list[0] + " " + item_list[1]:<40}{item_list[2]:<40}{float(item_list[7]):>10.3f}\n')
             except (ValueError, TypeError):
                 print(f'Could not convert value {item_list[7]} for vehicle {item_list[0]} {item_list[1]} {item_list[2]}')
-
     out_file.close()
