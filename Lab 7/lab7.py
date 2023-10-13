@@ -14,7 +14,7 @@ def get_min_mpg() -> int:
                     print('Fuel economy must be greater than 0.\n')
                 else:
                     print('Fuel economy must be less than or equal to 100.\n')
-        except ValueError:
+        except ValueError:  # Handles invalid input value
             print('You must enter a number for the fuel economy.\n')
 
 
@@ -26,7 +26,7 @@ def get_input_file() -> str:
             with open(input_filename, 'r'):
                 print()
                 return input_filename
-        except FileNotFoundError:
+        except FileNotFoundError:  # Handles invalid input files
             print(f'Could not open file {input_filename}.\n')
 
 
@@ -37,7 +37,7 @@ def get_output_file() -> str:
         try:
             with open(output_filename, 'w'):
                 return output_filename
-        except IOError:
+        except IOError:  # Handles invalid output file names
             print(f'There is an IO Error {output_filename}')
 
 
@@ -53,8 +53,8 @@ with open(get_input_file(), 'r') as input_file:
         for item in lines:
             item_list = item.split('\t')
             try:
-                if float(item_list[7]) >= min_mpg:
+                if float(item_list[7]) >= min_mpg:  # Writes line to output file if combinedmpg > min_mpg
                     out_file.write(f'{item_list[0] + " " + item_list[1]:<40}{item_list[2]:<40}{float(item_list[7]):>10.3f}\n')
-            except (ValueError, TypeError):
+            except ValueError:  # Handles invalid file entries
                 print(f'Could not convert value {item_list[7]} for vehicle {item_list[0]} {item_list[1]} {item_list[2]}')
     out_file.close()
