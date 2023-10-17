@@ -11,7 +11,7 @@
   * Unit Tests - [lab05_tests.py](Lab%205/lab05_tests.py)
 * Week 7 --- [Lab 6 - _EXAM 1_](Exam%201/lab6.py)
 * Week 8 --- [Lab 7 - _Files + Handling exceptions_](Lab%207/lab7.py)
-* Week 9 --- [Lab 8 - _Using Lists and Tuples_]()
+* Week 9 --- [Lab 8 - _Using Lists and Tuples_](Lab%208/lab8.py)
 * Week 10 --- [Lab 9 - _Using Dictionaries and Sets_]()
 * Week 11 --- [Lab 10 - _Dictionaries and Sets_]()
 * Week 12 --- **TBD**
