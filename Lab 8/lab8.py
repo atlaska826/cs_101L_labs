@@ -1,7 +1,5 @@
 import math
 
-# TODO: Add in docstrings and comments
-
 """ VARIABLES """
 menu = {
     '1': 'Add Test',
