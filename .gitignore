@@ -245,3 +245,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,windows,venv
+/Lab 9/KCPD_Crime_Data_2019.csv
+/Lab 9/CrimeDataSmall.csv
+/Lab 9/CrimeDataVS.csv

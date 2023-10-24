@@ -1,0 +1,5 @@
+not exists
+badfile.csv
+KCPD_Crime_Data_2019.csv
+purjury
+Arson
