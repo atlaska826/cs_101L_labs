@@ -2,7 +2,6 @@ import unittest
 
 import lab9 as cds
 
-
 class CrimeDataTesting(unittest.TestCase):
 
     def test_read_in_file(self):

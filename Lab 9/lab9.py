@@ -80,7 +80,6 @@ def create_offense_by_zip(data):
                 offense_zip[offense][zip_code] += 1
     return offense_zip
 
-
 """ MAIN PROGRAM """
 if __name__ == "__main__":
     while True:
