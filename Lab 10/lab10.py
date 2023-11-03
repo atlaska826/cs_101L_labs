@@ -2,7 +2,6 @@ import string
 
 """ FUNCTIONS """
 
-
 def get_file():
     """Gets a valid file from user input"""
     while True:
