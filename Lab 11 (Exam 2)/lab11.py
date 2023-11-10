@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 """ VARIABLES """
 menu = {
@@ -8,7 +9,8 @@ menu = {
     4: 'Exit'
 }
 
-df = None
+df = None  # Empty DataFrame
+cwd = os.getcwd()  # Gets the current working directory for file storage
 
 """ FUNCTIONS """
 
@@ -62,7 +64,7 @@ try:
                 class_name = input('Enter the class name to create its CSV (e.g., 10-A): ')
                 filtered_df = df.loc[df['Class'] == class_name]
 
-            with open(f'C:/Users/niman/Desktop/CS 101/CS101L_Labs/Lab 11 (Exam 2)/class_{class_name}.csv', 'w',
+            with open(f'{cwd}/class_{class_name}.csv', 'w',
                       newline='\n') as file:
                 file.write(filtered_df.to_csv(index=False))
             print(f'CSV file created for class {class_name}.')
@@ -84,7 +86,7 @@ try:
                 top_name = df[df.Total == df.Total.max()].iloc[0]['Name']
                 print(f'Student with the highest total score: {top_name}\n')
 
-                with open(f'C:/Users/niman/Desktop/CS 101/CS101L_Labs/Lab 11 (Exam 2)/students_totals.csv', 'w',
+                with open(f'{cwd}/students_totals.csv', 'w',
                           newline='\n') as file:
                     file.write(df.to_csv(index=False))
                 print(f'DataFrame with Total score saved to \'students_totals.csv\'.')
