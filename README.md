@@ -22,7 +22,6 @@
   * Inputs --- [lab11_input.txt]()
 * Week 13 --- [Lab 12 - _Classes_](Lab%2012/lab12.py)
   * Inputs - [lab12_input.txt](Lab%2012/lab12_input.txt)
-* Week 14 --- [Lab 13 - _Inheritance_]()
-  * Inputs - [lab13_input.txt]()
+* Week 14 --- [Lab 13 - _Inheritance_](Lab%2013/lab13.py)
 * Week 15 --- [Lab 14 - _Creating Unit tests_]()
   * Inputs - [lab14_input.txt]()
