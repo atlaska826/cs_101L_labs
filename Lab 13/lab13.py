@@ -76,18 +76,21 @@ class CircleFilled(Circle):
 def export_image(image_name):
     """Creates an image of the current turtle screen and adds them to an Images folder"""
     # Figure out how to save certain frames to a folder of images, so you don't have to ss each one
-    if not os.path.exists(cwd + '/Images/'):
-        os.mkdir(cwd + '/Images/')
+    if not os.path.exists(cwd + '/images/'):
+        os.mkdir(cwd + '/images/')
+
+    if not os.path.exists(cwd + '/eps_files/'):
+        os.mkdir(cwd + '/eps_files/')
 
     filename = 'lab13_img_' + str(image_name)
     screen = turtle.getscreen()
-    screen.getcanvas().postscript(file=filename + '.eps')
+    screen.getcanvas().postscript(file=f'{cwd}/eps_files/{filename}.eps')
 
-    with Image.open(filename + '.eps') as image:
+    with Image.open(f'{cwd}/eps_files/{filename}.eps') as image:
         image.convert()
         image.save(f'{cwd}/Images/{filename + ".jpg"}')
 
-    os.remove(f'{cwd}/{filename + ".eps"}')
+    os.remove(f'{cwd}/eps_files/{filename + ".eps"}')
     turtle.clear()
 
 
@@ -133,3 +136,6 @@ export_image('Circle')
 c = CircleFilled(1, 2, 100, 'red', 'blue')
 c.draw()
 export_image('CircleFilled')
+
+if os.path.exists(cwd + '/eps_files/'):
+    os.rmdir(cwd + '/eps_files/')
